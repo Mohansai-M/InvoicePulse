@@ -3,24 +3,157 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif,
+               "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}:root {
+  --background: #f9fafb;
+  --foreground: #171717;
+  --primary: #3b82f6;
+  --secondary: #dc2626;
+  --success: #16a34a;
+  --accent: #4caf50;
+  --text: #171717;
+  --border: #ccc;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
+/* Page container */
+.page-container,
+.home-page,
+.upload-page {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1.5rem;
   background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* Upload container */
+.upload-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* File input */
+.file-input {
+  border: 1px solid var(--border);
+  padding: 6px;
+  border-radius: 5px;
+}
+
+/* Invoice form & line items */
+.invoice-form,
+.line-items {
+  margin-top: 20px;
+}
+
+/* Input fields */
+.input-field,
+.input-inline {
+  display: block;
+  width: 100%;
+  margin-bottom: 8px;
+  border: 1px solid var(--border);
+  padding: 6px;
+  border-radius: 5px;
+}
+
+/* Table */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  background: white;
+}
+
+.table th,
+.table td {
+  border: 1px solid #ddd;
+  padding: 6px;
+  text-align: center;
+}
+
+/* Buttons */
+.btn {
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.upload-btn {
+  background: var(--secondary);
+}
+
+.add-btn {
+  background: var(--primary);
+  margin-top: 10px;
+}
+
+.save-btn {
+  background: var(--success);
+  margin-top: 15px;
+}
+
+.back-btn {
+  background: #9ca3af;
+  margin-left: 10px;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.navbar .logo {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.nav-right .btn {
+  margin-left: 8px;
+}
+
+/* Progress bar */
+.progress-wrap {
+  width: 100%;
+  background: #e5e7eb;
+  border-radius: 5px;
+  margin-top: 8px;
+}
+
+.progress-bar {
+  background: var(--accent);
+  height: 8px;
+  border-radius: 5px;
+  width: 0%;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: var(--primary);
+}
+
+Link
+{
+  
 }
